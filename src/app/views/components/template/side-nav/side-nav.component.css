@@ -1,0 +1,21 @@
+.container {
+  height: 70%;
+  background-color: var(--bg-color);
+}
+
+.sidenav {
+  background-color: var(--light-grey);
+}
+
+.nav-list a {
+  color: var(--purple);
+}
+
+.material-icons {
+  margin-right: 10px;
+}
+
+button {
+  margin: 0 auto 0 1rem;
+  color: var(--purple);
+}
