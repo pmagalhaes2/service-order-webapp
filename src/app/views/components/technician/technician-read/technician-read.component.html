@@ -1,3 +1,9 @@
+<div class="create">
+  <button (click)="navigateToCreate()" mat-flat-button="primary" class="mat-elevation-z2" >
+    <p>Criar novo técnico</p>
+  </button>
+</div>
+
 <div class="mat-elevation-z5 container">
   <table mat-table [dataSource]="dataSource">
     <!-- Position Column -->
@@ -28,8 +34,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 
-  <mat-paginator class="paginator"
-    [pageSizeOptions]="[5, 10]"
+  <mat-paginator
+    class="paginator"
+    [pageSizeOptions]="[2, 4]"
     showFirstLastButtons
   >
   </mat-paginator>
