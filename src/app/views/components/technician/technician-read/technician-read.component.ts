@@ -20,14 +20,14 @@ export class TechnicianReadComponent implements AfterViewInit {
   constructor(private service: TechnicianService) {}
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.findAll();
   }
 
   findAll(): void {
     this.service.findAll().subscribe((response) => {
       this.technicians = response;
-      console.log(this.technicians);
+      this.dataSource = new MatTableDataSource<Technician>(this.technicians);
+      this.dataSource.paginator = this.paginator;
     });
   }
 }
