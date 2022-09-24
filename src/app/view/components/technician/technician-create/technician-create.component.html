@@ -1,0 +1,31 @@
+<form class="form mat-elevation-z5">
+  <h1>Cadastro de Técnico</h1>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Nome completo *</mat-label>
+    <input matInput placeholder="Ex. Maria da Silva" />
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>CPF *</mat-label>
+    <input matInput placeholder="Ex. 000.000.000-00" />
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Telefone *</mat-label>
+    <input matInput placeholder="Ex. (00) 90000-0000" />
+  </mat-form-field>
+  <div class="create">
+    <button
+      (click)="create()"
+      mat-flat-button="primary"
+      class="mat-elevation-z2"
+    >
+      <p>Criar</p>
+    </button>
+    <button
+      (click)="cancel()"
+      mat-flat-button="primary"
+      class="mat-elevation-z2 cancel"
+    >
+      <p>Cancelar</p>
+    </button>
+  </div>
+</form>

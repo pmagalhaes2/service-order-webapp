@@ -23,6 +23,8 @@ import { FooterComponent } from "./views/components/template/footer/footer.compo
 import { SideNavComponent } from "./views/components/template/side-nav/side-nav.component";
 import { HomeComponent } from "./views/components/home/home.component";
 import { TechnicianReadComponent } from "./views/components/technician/technician-read/technician-read.component";
+import { TechnicianCreateComponent } from './view/components/technician/technician-create/technician-create.component';
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { TechnicianReadComponent } from "./views/components/technician/technicia
     SideNavComponent,
     HomeComponent,
     TechnicianReadComponent,
+    TechnicianCreateComponent,
   ],
   imports: [
     HttpClientModule,
@@ -49,7 +52,8 @@ import { TechnicianReadComponent } from "./views/components/technician/technicia
     MatInputModule,
     MatDatepickerModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
