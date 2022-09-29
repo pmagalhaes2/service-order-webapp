@@ -1,20 +1,47 @@
 <form class="form mat-elevation-z5">
   <h1>Cadastro de Técnico</h1>
   <mat-form-field class="full-width" appearance="outline">
-    <mat-label>Nome completo *</mat-label>
-    <input matInput placeholder="Ex. Maria da Silva" />
+    <mat-label>Nome completo</mat-label>
+    <input
+      [(ngModel)]="technician.name"
+      [formControl]="name"
+      required
+      name="name"
+      matInput
+      placeholder="Ex. Maria da Silva"
+    />
+    <mat-error *ngIf="name.invalid">{{ errorInvalidName() }}</mat-error>
   </mat-form-field>
   <mat-form-field class="full-width" appearance="outline">
-    <mat-label>CPF *</mat-label>
-    <input matInput placeholder="Ex. 000.000.000-00" />
+    <mat-label>CPF</mat-label>
+    <input
+      [(ngModel)]="technician.cpf"
+      [formControl]="cpf"
+      required
+      name="cpf"
+      matInput
+      placeholder="Ex. 000.000.000-00"
+    />
+    <mat-error *ngIf="cpf.invalid">{{ errorInvalidCPF() }}</mat-error>
   </mat-form-field>
   <mat-form-field class="full-width" appearance="outline">
-    <mat-label>Telefone *</mat-label>
-    <input matInput placeholder="Ex. (00) 90000-0000" />
+    <mat-label>Telefone</mat-label>
+    <input
+      [(ngModel)]="technician.phoneNumber"
+      [formControl]="phoneNumber"
+      required
+      name="phoneNumber"
+      matInput
+      placeholder="Ex. (00) 90000-0000"
+    />
+    <mat-error *ngIf="phoneNumber.invalid">{{
+      errorInvalidPhoneNumber()
+    }}</mat-error>
   </mat-form-field>
   <div class="create">
     <button
       (click)="create()"
+      [disabled]="errorInvalidName() || errorInvalidCPF() || errorInvalidPhoneNumber()"
       mat-flat-button="primary"
       class="mat-elevation-z2"
     >
