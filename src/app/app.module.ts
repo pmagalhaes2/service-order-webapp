@@ -23,8 +23,9 @@ import { FooterComponent } from "./views/components/template/footer/footer.compo
 import { SideNavComponent } from "./views/components/template/side-nav/side-nav.component";
 import { HomeComponent } from "./views/components/home/home.component";
 import { TechnicianReadComponent } from "./views/components/technician/technician-read/technician-read.component";
-import { TechnicianCreateComponent } from './view/components/technician/technician-create/technician-create.component';
+import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     HomeComponent,
     TechnicianReadComponent,
     TechnicianCreateComponent,
+    TechnicianUpdateComponent,
   ],
   imports: [
     HttpClientModule,

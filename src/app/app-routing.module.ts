@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TechnicianCreateComponent } from './view/components/technician/technician-create/technician-create.component';
+import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
 
