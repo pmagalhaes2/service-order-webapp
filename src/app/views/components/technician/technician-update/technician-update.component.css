@@ -1,0 +1,71 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--light-grey);
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: var(--dark-grey);
+    font-weight: 600;
+    font-weight: 1.1rem;
+  }
+  
+  .mat-form-field {
+    width: 90%;
+  }
+  
+  input.mat-input-element {
+    color: var(--dark-grey);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  .mat-label {
+    font-size: 2rem;
+  }
+  
+  .create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  button {
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid var(--medium-grey);
+    background-color: var(--green);
+  }
+  
+  button p {
+    color: var(--light-grey);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .cancel {
+    background-color: var(--light-grey);
+  }
+  
+  .cancel p {
+    color: var(--green);
+  }
+  
+  ::ng-deep .customized-snackbar,
+  ::ng-deep .mat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef1f1;
+    color: #843334;
+    font-weight: 500;
+  }
+  
