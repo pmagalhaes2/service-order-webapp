@@ -1,5 +1,9 @@
 <div class="create">
-  <button (click)="navigateToCreate()" mat-flat-button="primary" class="mat-elevation-z2" >
+  <button
+    (click)="navigateToCreate()"
+    mat-flat-button="primary"
+    class="mat-elevation-z2"
+  >
     <p>Criar novo técnico</p>
   </button>
 </div>
@@ -28,6 +32,28 @@
     <ng-container matColumnDef="phoneNumber">
       <th mat-header-cell *matHeaderCellDef>Telefone</th>
       <td mat-cell *matCellDef="let element">{{ element.phoneNumber }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let element">
+        <a routerLink="update/{{ element.id }}"
+          ><i
+            style="color: var(--green)"
+            class="material-icons edit md-20"
+            title="Editar"
+            >edit</i
+          ></a
+        >
+        <a routerLink=""
+          ><i
+            style="color: var(--purple)"
+            class="material-icons md-20"
+            title="Deletar"
+            >delete</i
+          ></a
+        >
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

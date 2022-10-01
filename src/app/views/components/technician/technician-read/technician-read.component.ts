@@ -13,7 +13,7 @@ import { TechnicianService } from "src/app/services/technician.service";
 export class TechnicianReadComponent implements AfterViewInit {
   technicians: Technician[] = [];
 
-  displayedColumns: string[] = ["id", "name", "cpf", "phoneNumber"];
+  displayedColumns: string[] = ["id", "name", "cpf", "phoneNumber", "actions"];
   dataSource = new MatTableDataSource<Technician>(this.technicians);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
