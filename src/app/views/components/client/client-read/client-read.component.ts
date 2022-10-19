@@ -13,7 +13,7 @@ import { ClientService } from "src/app/services/client.service";
 export class ClientReadComponent implements AfterViewInit {
   clients: Client[] = [];
 
-  displayedColumns: string[] = ["id", "name", "cpf", "phoneNumber"];
+  displayedColumns: string[] = ["id", "name", "cpf", "phoneNumber", "actions"];
   dataSource = new MatTableDataSource<Client>(this.clients);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
