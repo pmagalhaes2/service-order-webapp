@@ -5,6 +5,7 @@ import { HomeComponent } from './views/components/home/home.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
 import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
+import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "technicians/delete/:id",
     component: TechnicianDeleteComponent
+  },
+  {
+    path: "clients",
+    component: ClientReadComponent
   }
 ];
 
