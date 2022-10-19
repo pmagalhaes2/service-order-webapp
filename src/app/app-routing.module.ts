@@ -6,6 +6,7 @@ import { TechnicianReadComponent } from './views/components/technician/technicia
 import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
 import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
+import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,11 @@ const routes: Routes = [
   {
     path: "clients",
     component: ClientReadComponent
-  }
+  },
+  {
+    path: "clients/create",
+    component: ClientCreateComponent
+  },
 ];
 
 @NgModule({

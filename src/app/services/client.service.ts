@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Client } from '../models/Client';
@@ -10,10 +11,24 @@ import { Client } from '../models/Client';
 export class ClientService {
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
   findAll(): Observable<Client[]> {
     const url = this.baseUrl + "/clients";
     return this.http.get<Client[]>(url);
+  }
+
+  create(client: Client): Observable<Client> {
+    const url = this.baseUrl + "/clients"
+    return this.http.post<Client>(url, client)
+  }
+
+  returnMessage(msg: String): void {
+    this.snack.open(`${msg}`, "x", {
+      horizontalPosition: "end",
+      verticalPosition: "top",
+      duration: 4000,
+      panelClass: ["customized-snackbar"],
+    });
   }
 }

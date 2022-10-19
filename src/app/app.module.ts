@@ -28,6 +28,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
 import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
+import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ClientReadComponent } from './views/components/client/client-read/clien
     TechnicianUpdateComponent,
     TechnicianDeleteComponent,
     ClientReadComponent,
+    ClientCreateComponent,
   ],
   imports: [
     HttpClientModule,

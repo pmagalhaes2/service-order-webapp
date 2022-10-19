@@ -31,4 +31,8 @@ export class ClientReadComponent implements AfterViewInit {
       this.dataSource.paginator = this.paginator;
     });
   }
+
+  navigateToCreate(): void {
+    this.router.navigate(["clients/create"]);
+  }
 }
