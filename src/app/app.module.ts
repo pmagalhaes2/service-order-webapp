@@ -26,6 +26,7 @@ import { TechnicianReadComponent } from "./views/components/technician/technicia
 import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
+import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TechnicianUpdateComponent } from './views/components/technician/technic
     TechnicianReadComponent,
     TechnicianCreateComponent,
     TechnicianUpdateComponent,
+    TechnicianDeleteComponent,
   ],
   imports: [
     HttpClientModule,
