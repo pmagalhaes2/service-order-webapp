@@ -33,6 +33,11 @@ export class ClientService {
     return this.http.get<Client>(url);
   }
 
+  delete(id: any): Observable<void> {
+    const url = this.baseUrl + "/clients/" + id;
+    return this.http.delete<void>(url);
+  }
+
   returnMessage(msg: String): void {
     this.snack.open(`${msg}`, "x", {
       horizontalPosition: "end",
