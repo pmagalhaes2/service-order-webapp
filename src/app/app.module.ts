@@ -31,7 +31,7 @@ import { ClientReadComponent } from './views/components/client/client-read/clien
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { ClientDeleteComponent } from './views/components/client/client-delete/client-delete.component';
-import { ServiceOrderReadComponent } from './views/components/service-order/service-order/service-order-read.component';
+import { ServiceOrderReadComponent } from './views/components/service-order/service-order-read/service-order-read.component';
 
 @NgModule({
   declarations: [
