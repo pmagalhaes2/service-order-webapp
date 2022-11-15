@@ -1,0 +1,46 @@
+.container {
+    margin: 0 auto;
+    width: 75%;
+  }
+  
+  button {
+    width: 75%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--medium-grey);
+    background-color: var(--green);
+    height: 50px;
+  }
+  
+  button p {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  table,
+  .paginator {
+    width: 100%;
+    background-color: var(--light-grey);
+  }
+  
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--purple);
+  }
+  
+  td {
+    color: var(--medium-grey);
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+  .material-icons.md-20 {
+    font-size: 20px;
+  }
+  
