@@ -32,6 +32,7 @@ import { ClientCreateComponent } from './views/components/client/client-create/c
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { ClientDeleteComponent } from './views/components/client/client-delete/client-delete.component';
 import { ServiceOrderReadComponent } from './views/components/service-order/service-order-read/service-order-read.component';
+import { ServiceOrderCreateComponent } from './views/components/service-order/service-order-create/service-order-create.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ServiceOrderReadComponent } from './views/components/service-order/serv
     ClientUpdateComponent,
     ClientDeleteComponent,
     ServiceOrderReadComponent,
+    ServiceOrderCreateComponent,
   ],
   imports: [
     HttpClientModule,
