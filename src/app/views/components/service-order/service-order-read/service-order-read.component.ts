@@ -54,15 +54,57 @@ export class ServiceOrderReadComponent implements AfterViewInit {
   }
 
   getTechnicianName(): void {
-    this.serviceOrder.forEach(el => 
-      this.technicianService.findById(el.technician).subscribe(response => {
-        el.technician = response.name
-      }))
+    this.serviceOrder.forEach((el) =>
+      this.technicianService.findById(el.technician).subscribe((response) => {
+        el.technician = response.name;
+      })
+    );
   }
 
   getClientName(): void {
-    this.serviceOrder.forEach(el => this.clientService.findById(el.client).subscribe(response => {
-      el.client = response.name
-    }) )
+    this.serviceOrder.forEach((el) =>
+      this.clientService.findById(el.client).subscribe((response) => {
+        el.client = response.name;
+      })
+    );
+  }
+
+  priority(priority: String): any {
+    switch (priority) {
+      case "LOW":
+        return "low";
+      case "MEDIUM":
+        return "medium";
+      case "HIGH":
+        return "high";
+      default:
+        null;
+    }
+  }
+
+  setPriority(priority: String): any {
+    switch (priority) {
+      case "LOW":
+        return "BAIXA";
+      case "MEDIUM":
+        return "MÉDIA";
+      case "HIGH":
+        return "ALTA";
+      default:
+        null;
+    }
+  }
+
+  setStatus(status: String): any {
+    switch (status) {
+      case "OPENED":
+        return "ABERTO";
+      case "IN_PROGRESS":
+        return "EM ANDAMENTO";
+      case "FINISHED":
+        return "FINALIZADO";
+      default:
+        null;
+    }
   }
 }
