@@ -1,0 +1,49 @@
+.card-container h1 {
+  text-align: center;
+  color: var(--purple);
+  font-weight: 600;
+  font-weight: 1rem;
+  margin: 0;
+}
+
+.mat-card {
+  background-color: var(--light-grey);
+  width: 50%;
+  padding: 20px;
+  margin: 0 auto; 
+}
+
+.title {
+  font-weight: bold;
+  color: var(--medium-grey);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: var(--dark-blue);
+  font-weight: 300;
+}
+
+button {
+  width: 50%;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: var(--green);
+  margin: 20px auto;
+  font-size: 1rem;
+  border: 1px solid var(--medium-grey);
+}
+
+.mat-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.mat-card-image {
+  max-width: 30%;
+  margin: auto;
+}

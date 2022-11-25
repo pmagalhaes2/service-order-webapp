@@ -1,0 +1,35 @@
+<div class="card-container">
+  <mat-card class="card">
+    <h1>Detalhes da Ordem de Serviço:</h1>
+    <img
+      mat-card-image
+      src="assets/images/vector-service-order.png"
+      alt="Vector search"
+    />
+    <mat-card-content>
+      <span class="title"
+        >ID: <span class="subtitle">#{{ serviceOrder.id }}</span></span
+      >
+      <span class="title"
+        >Status:
+        <span class="subtitle">{{ setStatus(serviceOrder.status) }}</span></span
+      >
+      <span class="title"
+        >Data de abertura:
+        <span class="subtitle">{{ serviceOrder.openingDate }}</span></span
+      >
+      <span class="title"
+        >Data de fechamento: 
+        <span class="subtitle">{{
+          serviceOrder.endingDate ? serviceOrder.endingDate : ""
+        }}</span></span
+      >
+
+      <span class="title"
+        >Observações:
+        <span class="subtitle">{{ serviceOrder.notes }}</span></span
+      >
+    </mat-card-content>
+  </mat-card>
+    <button mat-flat-button (click)="return()">Voltar</button>
+</div>
