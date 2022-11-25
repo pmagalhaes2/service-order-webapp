@@ -4,7 +4,7 @@ export interface ServiceOrder {
     endingDate?: Date;
     priority: String;
     notes: String;
-    status: String;
+    status?: String;
     technician: any;
     client: any;
 };
