@@ -16,7 +16,6 @@ export class ServiceOrderCreateComponent implements OnInit {
   serviceOrder: ServiceOrder = {
     priority: "",
     notes: "",
-    status: "",
     technician: "",
     client: "",
   };
