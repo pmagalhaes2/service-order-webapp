@@ -1,66 +1,76 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
-import { HomeComponent } from './views/components/home/home.component';
-import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
-import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
-import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
-import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
-import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
-import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
-import { ClientDeleteComponent } from './views/components/client/client-delete/client-delete.component';
-import { ServiceOrderReadComponent } from './views/components/service-order/service-order-read/service-order-read.component';
-import { ServiceOrderCreateComponent } from './views/components/service-order/service-order-create/service-order-create.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { TechnicianCreateComponent } from "./views/components/technician/technician-create/technician-create.component";
+import { HomeComponent } from "./views/components/home/home.component";
+import { TechnicianReadComponent } from "./views/components/technician/technician-read/technician-read.component";
+import { TechnicianUpdateComponent } from "./views/components/technician/technician-update/technician-update.component";
+import { TechnicianDeleteComponent } from "./views/components/technician/technician-delete/technician-delete.component";
+import { ClientReadComponent } from "./views/components/client/client-read/client-read.component";
+import { ClientCreateComponent } from "./views/components/client/client-create/client-create.component";
+import { ClientUpdateComponent } from "./views/components/client/client-update/client-update.component";
+import { ClientDeleteComponent } from "./views/components/client/client-delete/client-delete.component";
+import { ServiceOrderReadComponent } from "./views/components/service-order/service-order-read/service-order-read.component";
+import { ServiceOrderCreateComponent } from "./views/components/service-order/service-order-create/service-order-create.component";
+import { ServiceOrderUpdateComponent } from "./views/components/service-order/service-order-update/service-order-update.component";
+import { ServiceOrderViewComponent } from "./views/components/service-order/service-order-view/service-order-view.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: "technicians",
-    component: TechnicianReadComponent
+    component: TechnicianReadComponent,
   },
   {
     path: "technicians/create",
-    component: TechnicianCreateComponent
+    component: TechnicianCreateComponent,
   },
   {
     path: "technicians/update/:id",
-    component: TechnicianUpdateComponent
+    component: TechnicianUpdateComponent,
   },
   {
     path: "technicians/delete/:id",
-    component: TechnicianDeleteComponent
+    component: TechnicianDeleteComponent,
   },
   {
     path: "clients",
-    component: ClientReadComponent
+    component: ClientReadComponent,
   },
   {
     path: "clients/create",
-    component: ClientCreateComponent
+    component: ClientCreateComponent,
   },
   {
     path: "clients/update/:id",
-    component: ClientUpdateComponent
+    component: ClientUpdateComponent,
   },
   {
     path: "clients/delete/:id",
-    component: ClientDeleteComponent
+    component: ClientDeleteComponent,
   },
   {
-    path: 'service-order',
-    component: ServiceOrderReadComponent
+    path: "service-order",
+    component: ServiceOrderReadComponent,
   },
   {
-    path: 'service-order/create',
-    component: ServiceOrderCreateComponent
-  }
+    path: "service-order/create",
+    component: ServiceOrderCreateComponent,
+  },
+  {
+    path: "service-order/update/:id",
+    component: ServiceOrderUpdateComponent,
+  },
+  {
+    path: "service-order/view/:id",
+    component: ServiceOrderViewComponent
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
